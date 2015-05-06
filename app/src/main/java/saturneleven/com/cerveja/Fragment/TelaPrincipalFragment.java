@@ -1,6 +1,5 @@
 package saturneleven.com.cerveja.Fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +28,4 @@ public class TelaPrincipalFragment extends android.support.v4.app.Fragment
 
         return v;
     }
-
-
 }

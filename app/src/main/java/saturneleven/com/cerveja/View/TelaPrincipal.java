@@ -1,5 +1,6 @@
 package saturneleven.com.cerveja.View;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
@@ -35,12 +36,19 @@ public class TelaPrincipal extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position)
     {
-        // update the main content by replacing fragments
 
         FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = null;
+
+        switch(position)
+        {
+            case 0:
+                fragment = TelaPrincipalFragment.newInstance();
+                break;
+        }
 
         fragmentManager.beginTransaction()
-                .replace(R.id.container, TelaPrincipalFragment.newInstance())
+                .replace(R.id.container, fragment)
                 .commit();
     }
 
